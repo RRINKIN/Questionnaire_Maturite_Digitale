@@ -6,8 +6,9 @@
         <meta name="description" content="blalalal" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <!-- autre méta -->
+        <!-- CSS -->
         <style>
             *{
                 box-sizing: border-box;
@@ -52,11 +53,9 @@
                 color: firebrick;
                 margin-left: 4px;
             }
-
             .survey__form__group__image {
                 margin: 0 1rem;
             }
-
             .survey__form__group__image img {
                 max-width: 900px;
                 width: 100%;
@@ -72,20 +71,15 @@
                 align-items: center;
                 padding: 16px 16px 16px 0;
             }
-
             .survey__form__group__text {
                 max-width: 450px;
             }
-
             .survey__form__block {
                 margin: 1rem auto;
                 padding: 0.3rem;
                 max-width: 900px;
                 border-radius: 16px;
-                /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                background-image: linear-gradient(45deg, rgb(250, 250, 250), rgb(185, 185, 194));*/
             }
-
             .survey__form__block_sub, .survey__form__block_sub_small {
                 margin: 1rem auto;
                 padding: 1rem;
@@ -94,16 +88,13 @@
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                 background-image: linear-gradient(45deg, rgb(250, 250, 250), rgb(185, 185, 194));
             }
-
             #survey__result, #survey__form {
                 margin: 16px;
             }
-
             .survey__form__submit__wrapper {
                 display: flex;
                 justify-content: flex-end;
             }
-
             .button {
                 background-color: rgb(46, 89, 134);
                 border-radius: 5px;
@@ -113,7 +104,6 @@
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                 cursor: pointer;
             }
-
             .l-main-buttonToContact{
                 background-color: rgb(59, 167, 104);
                 border-radius: 5px;
@@ -124,23 +114,19 @@
                 font-size: 0.9rem;
                 cursor: pointer;
             }
-
             .fab{
                 color: rgb(46, 89, 134);
                 font-size: 2rem;
             }
-
             .fa-paper-plane {
                 padding: 0 0.5rem;
             }
-
             .l-main-butterRS-wrapper {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
             }
-
             .survey__form__answers_wrapper {
                 display: flex;
                 flex-direction: row;
@@ -148,18 +134,15 @@
                 flex-wrap: wrap;
                 align-items: center;
             }
-
             .fa-eye, .fa-comment, .fa-compress-arrows-alt, .fa-user-friends, .fa-brain, .fa-chart-bar {
                 color: rgb(46, 89, 134);
             }
-
             @media screen and (max-width: 600px) {
                 .survey__form__group__logo {
                     display: block;
                     padding: 16px 16px 16px 0;
                 }
             }
-
             @media screen and (min-width: 600px) {
                 .survey__form__block_sub_small {
                     margin: 1rem auto;
@@ -928,37 +911,129 @@
                     <p>Vous trouverez ci-dessous les résultats de votre étude de maturité. Nous espérons que cela vous sera utile pour progresser dans votre marketing.</p>
                     <div>
                         <canvas id="myChart"></canvas>
-                    </div>                      
+                    </div>
                     <div  class="survey__form__answers_wrapper">
-                        <div class="survey__form__block_sub_small">
+                        <!-- Réponses intelligente block 1 -->
+                        <div class="survey__form__block_sub_small d-none" id="q-1-0">
                             <i class="fas fa-eye"></i>
                             A la thématique 1/6 "Visibilité digitale",  vous avez réalisé le score de <span id="survey__score__output1"></span>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor sapiente commodi perferendis magnam velit adipisci architecto, suscipit delectus ratione molestias.</p>
+                            <p>Le message que vous voulez faire passer à travers votre marketing digital, peut certainement être amélioré. Pour débuter cette amélioration, il est indispensable de clarifier votre cible. Sans cela, vos valeurs ou la clarté et la lisibilité de votre marketing digital ne répondra pas aux attentes de votre audience et vos invitations à prendre action seront moins efficaces. 
+                            <br>
+                            <br> Découvrez comment améliorer votre positionnement et ciblage : <a href="https://www.selegua.be/etudes-digitale-de-marche">etudes-digitale-de-marche</a></p>
                         </div>
-                        <div class="survey__form__block_sub_small">
+                        <div class="survey__form__block_sub_small d-none" id="q-1-1">
+                            <i class="fas fa-eye"></i>
+                            A la thématique 1/6 "Visibilité digitale", vous avez réalisé le score de <span id="survey__score__output1"></span>
+                            <p>LVous êtes sur la bonne voie, vous avez compris l’importance de cibler un public précis. La prochaine étape est maintenant d’être pertinent en matière de contenu et de valeurs que vous voulez diffuser. Grâce à cela votre marketing digital sera clair et vos invitations à prendre action plus intéressantes. Vous convertirez plus de visiteurs. 
+                            <br>
+                            <br> Découvrez comment améliorer votre positionnement et ciblage : <a href="https://www.selegua.be/etudes-digitale-de-marche">etudes-digitale-de-marche</a></p>
+                        </div>
+                        <div class="survey__form__block_sub_small d-none" id="q-1-2">
+                            <i class="fas fa-eye"></i>
+                            A la thématique 1/6 "Visibilité digitale", vous avez réalisé le score de <span id="survey__score__output1"></span>
+                            <p>Super, vous faites du bon travail ! Continuez de cibler vos visiteurs et partagez du contenu qui les intéresse. Concentrez-vous sur la clarté et la lisibilité de votre site. N’oubliez pas de modifier régulièrement votre contenu pour qu’il soit toujours à jour. Pour bien réussir à convertir ces visiteurs, comme dit bien Marie-Anne Dujarier, la cible en marketing, c’est ce qu'il faut toucher pour ne pas couler.</p>
+                        </div>
+                        <!-- Réponses intelligente block 2 -->
+                        <div class="survey__form__block_sub_small d-none" id="q-2-0">
                             <i class="fas fa-comment"></i>
                             A la thématique 2/6 "votre message", vous avez réalisé le score de <span id="survey__score__output2"></span>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere explicabo repudiandae at, cumque molestias rerum nulla accusantium repellendus ipsa magnam?</p>
+                            <p>Attention, votre visibilité sur internet semble faible. Priorité à 2 choses. Premièrement, un site internet responsive, à jour et contenant une page pour chaque produit / service. Ensuite, ouvrez un second canal de communication afin d’y diffuser du contenu (réseaux sociaux, newsletter, influenceurs ou marketplace). 
+                            <br>
+                            <br> Découvrez ici comment remédier à cela : <a href="https://www.selegua.be/assistance-marketing">Community</a> et <a href="https://www.selegua.be/community-management">Assistance marketing digital.</a></p>
                         </div>
-                        <div class="survey__form__block_sub_small">
+                        <div class="survey__form__block_sub_small d-none" id="q-2-1">
+                            <i class="fas fa-comment"></i>
+                            A la thématique 2/6 "votre message", vous avez réalisé le score de <span id="survey__score__output2"></span>
+                            <p>Vous êtes bien parti, mais on peut toujours mieux faire. Il semble que l’infrastructure de communication soit en place, on peut maintenant travailler la fréquence de communication. 
+                                Essayer de publier du contenu plus régulièrement et d’en varier le contenu. Parlez de vous, de vos réalisations, de vos équipes, de vos clients… Faites rêver. Et faites un calendrier éditorial ;-).  
+                            <br>
+                            <br> Découvrez ici comment remédier à cela : <a href="https://www.selegua.be/assistance-marketing">Community</a> et <a href="https://www.selegua.be/community-management">Assistance marketing digital.</a></p>
+                        </div>
+                        <div class="survey__form__block_sub_small d-none" id="q-2-2">
+                            <i class="fas fa-comment"></i>
+                            A la thématique 2/6 "votre message", vous avez réalisé le score de <span id="survey__score__output2"></span>
+                            <p>Super, continuez comme ça ! Continuer de publier du contenu régulièrement afin d’accroître votre visibilité. Cela devrait engager votre public, les impliquer dans vos posts et surtout les fidéliser sur le long terme. Beaucoup de canaux différents sont disponibles, n’hésitez pas à vous créer de nouvelles audiences dans les différents supports afin de vous créer une belle communauté.</p>
+                        </div>
+                        <!-- Réponses intelligente block 3 -->
+                        <div class="survey__form__block_sub_small d-none" id="q-3-0">
                             <i class="fas fa-compress-arrows-alt"></i>
                             A la thématique 3/6 "Concurrence", vous avez réalisé le score de <span id="survey__score__output3"></span>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus quia nemo in ab dolores praesentium asperiores alias provident aliquam nesciunt?</p>
+                            <p>Vous êtes au début de votre veille. Écouter et connaître son marché et ses concurrents permet d’identifier les opportunités à saisir, fixer vos prix ou réagir aux concurrents. Vous pourrez aussi vous positionner de manière différenciant pour vous démarquer et non vous noyez dans la masse. Prenez le temps de faire un tour sur les sites concurrents.
+                            <br>    
+                            <br> Découvrez ici de quelle manière il est possible de prendre la tangente ! <a href="https://www.selegua.be/etudes-digitale-de-marche">Veille et étude de marché</a></p>
                         </div>
-                        <div class="survey__form__block_sub_small">
+                        <div class="survey__form__block_sub_small d-none" id="q-3-1">
+                            <i class="fas fa-compress-arrows-alt"></i>
+                            A la thématique 3/6 "Concurrence", vous avez réalisé le score de <span id="survey__score__output3"></span>
+                            <p>C’est bien, mais vous pouvez aller un peu plus loin. Pourquoi ne pas systématiser voir automatiser votre veille ? Écouter et connaître votre marché et vos concurrents devrait vous permettre d’identifier de nouvelles opportunités et de renforcer votre positionnement différenciant. 
+                            <br> 
+                            <br> Découvrez ici de quelle manière il est possible de prendre la tangente ! <a href="https://www.selegua.be/etudes-digitale-de-marche">Veille et étude de marché</a></p>
+                        </div>
+                        <div class="survey__form__block_sub_small d-none" id="q-3-2">
+                            <i class="fas fa-compress-arrows-alt"></i>
+                            A la thématique 3/6 "Concurrence", vous avez réalisé le score de <span id="survey__score__output3"></span>
+                            <p>C’est top, continuez comme ça ! Il semble que vous soyez attentif à votre marché et bien équipé pour écouter ce qu’il s’y passe. Maintenez le rythme, car votre marché peut changer à tout moment.</p>
+                        </div>
+                        <!-- Réponses intelligente block 4 -->
+                        <div class="survey__form__block_sub_small d-none" id="q-4-0">
                             <i class="fas fa-user-friends"></i>
                             A la thématique 4/6 "Organisation marketing", vous avez réalisé le score de <span id="survey__score__output4"></span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus officiis culpa nisi eveniet, quasi laudantium magnam minima doloremque ipsum commodi.</p>
+                            <p>Vous pouvez mieux faire ! Votre organisation marketing est primordiale. Tout d'abord, assurez-vous que quelqu’un s’approprie le projet. Ensuite, définissez un budget. Enfin, définissez vos objectifs et créez un plan d’action. Le reste va suivre naturellement. Bonne chance !
+                            <br> 
+                            <br> Découvrez ici les possibilités disponibles <a href="https://www.selegua.be/direction-marketing">Direction marketing</a></p>
                         </div>
-                        <div class="survey__form__block_sub_small">
+                        <div class="survey__form__block_sub_small d-none" id="q-4-1">
+                            <i class="fas fa-user-friends"></i>
+                            A la thématique 4/6 "Organisation marketing", vous avez réalisé le score de <span id="survey__score__output4"></span>
+                            <p>C’est bien. Votre équipe marketing se structure. Concentrez-vous dès lors sur le plan d’action, les expertises dont vous avez besoin et les outils à utiliser. Au besoin, envisagez de former vos équipes ou de vous faire accompagner. Finalement, mesurez le tout si ce n’est pas encore le cas. C’est à ce prix que vous trouverez la stratégie qui fonctionne pour vous. 
+                            <br> 
+                            <br> Découvrez ici les possibilités disponibles <a href="https://www.selegua.be/direction-marketing">Direction marketing</a></p>
+                        </div>
+                        <div class="survey__form__block_sub_small d-none" id="q-4-2">
+                            <i class="fas fa-user-friends"></i>
+                            A la thématique 4/6 "Organisation marketing", vous avez réalisé le score de <span id="survey__score__output4"></span>
+                            <p>Vous êtes dans le bon et vous avez compris comment vous devez fonctionner. L’accent reste sur la mesure, le recul, le challenge de vos actions par vous-même, vos équipes ou par un regard extérieur. En marketing digital, douter et essayer reste une valeur sûre.
+                            </p>
+                        </div>
+                        <!-- Réponses intelligente block 5 -->
+                        <div class="survey__form__block_sub_small d-none" id="q-5-0">
                             <i class="fas fa-brain"></i>
                             A la thématique 5/6 "Maitrise du marketing digital", vous avez réalisé le score de <span id="survey__score__output5"></span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia ratione nobis ipsa eaque voluptates provident eum. Aliquam, iusto laboriosam.</p>
+                            <p>Votre maîtrise semble encore un peu faible et vous ratez probablement des opportunités. Vous n’avez pas encore développé de véritable stratégie pour faire de l’acquisition de client. Pourquoi ne pas commencer par une campagne payante sur Google ou sur un réseau social ? On peut y faire des choses efficaces pour des budgets raisonnables. 
+                            <br>
+                            <br> Découvrez ici comment vous pouvez activer les bons leviers. <a href="https://www.selegua.be/marketing-digital ">Marketing digital</a></p>
                         </div>
-                        <div class="survey__form__block_sub_small">
+                        <div class="survey__form__block_sub_small d-none" id="q-5-1">
+                            <i class="fas fa-brain"></i>
+                            A la thématique 5/6 "Maitrise du marketing digital", vous avez réalisé le score de <span id="survey__score__output5"></span>
+                            <p>C’est bien mais, comme toujours, vous pouvez progresser. Pourquoi ne pas varier les techniques. Travailler votre SEO, varier votre contenu (vidéo, lives, articles…), spécialiser vos campagnes payantes… Les solutions sont très nombreuses. Testez et ne retenez que les plus efficaces ou copiez vos concurrents ;-) 
+                            <br>
+                            <br> Découvrez ici comment vous pouvez activer les bons leviers. <a href="https://www.selegua.be/marketing-digital ">Marketing digital</a></p>
+                        </div>
+                        <div class="survey__form__block_sub_small d-none" id="q-5-2">
+                            <i class="fas fa-brain"></i>
+                            A la thématique 5/6 "Maitrise du marketing digital", vous avez réalisé le score de <span id="survey__score__output5"></span>
+                            <p>Vous faites du bon boulot. Il ne reste plus qu’à varier les techniques. Travailler votre SEO, varier votre contenu (vidéo, lives, articles…), spécialiser vos campagnes payantes… Les solutions sont très nombreuses. Testez et ne retenez que les plus efficaces ou copiez vos concurrents ;-)</p>
+                        </div>
+                        <!-- Réponses intelligente block 6 -->
+                        <div class="survey__form__block_sub_small d-none" id="q-6-0">
                             <i class="far fa-chart-bar"></i>
                             A la thématique 6/6 "La Mesure", vous avez réalisé le score de <span id="survey__score__output6"></span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quibusdam accusamus minus? Obcaecati, amet voluptatum. Vitae nulla modi qui eaque!</p>
+                            <p>C'est dommage, vous êtes aveugle quant à l’efficacité de l’ensemble de vos efforts marketing ! L’élément central du marketing est de pouvoir analyser ses actions et en tirer des conclusions. Fixez des objectifs et des KPIs. Ensuite, allez faire un tour sur Google Analytics et les outils de reporting de vos réseaux sociaux.
+                            <br>
+                            <br> Découvrez ici les meilleurs moyens de mesurer ses efforts marketing. <a href="https://www.selegua.be/etudes-digitale-de-marche">Mesure</a></p>
+                        </div>
+                        <div class="survey__form__block_sub_small d-none" id="q-6-1">
+                            <i class="far fa-chart-bar"></i>
+                            A la thématique 6/6 "La Mesure", vous avez réalisé le score de <span id="survey__score__output6"></span>
+                            <p>C’est bien ! Passons la seconde. L’élément central du marketing est de pouvoir analyser ses actions et en tirer des conclusions. Clarifiez vos objectifs et KPIs et mesurez-les en permanence. Poussez l’exploitation de ses données au maximum et fixez-vous 1h toutes les semaines pour en discuter avec l’équipe Marketing et réorienter vos actions.
+                            <br>
+                            <br> Découvrez ici les meilleurs moyens de mesurer ses efforts marketing. <a href="https://www.selegua.be/etudes-digitale-de-marche">Mesure</a></p>
+                        </div>
+                        <div class="survey__form__block_sub_small d-none" id="q-6-2">
+                            <i class="far fa-chart-bar"></i>
+                            A la thématique 6/6 "La Mesure", vous avez réalisé le score de <span id="survey__score__output6"></span>
+                            <p>Vous êtes sur la bonne voie ! L’élément central du marketing est de pouvoir analyser ses actions et en tirer des conclusions. Clarifiez vos objectifs et KPIs et mesurez-les en permanence. Envisagez peut-être d’automatiser vos reportings si ce n’est pas le cas et fixer vous 1h toutes les deux semaines pour en discuter avec l’équipe Marketing.</p>
                         </div>
                         <p>De nombreuses pistes d'amélioration sont possibles. Découvrez les sur <a href="https://www.selegua.be">notre site.</a></p>
                     </div>
@@ -991,12 +1066,11 @@
             ];
             const data = {
                 labels: labels,
-                datasets: [{
+                datasets: [
+                    {
                     axis: 'y',
                     label: 'Résumé de votre maturité digitale',
-                    // data: [surveyScoreOutput1, surveyScoreOutput2, surveyScoreOutput3, surveyScoreOutput4, surveyScoreOutput5, surveyScoreOutput6],
-                    //data: [total1.value, Number(total2), Number(total3), Number(total4), Number(total5), Number(total6)],
-                    data: [7.36, 2, 3, 4, 5, 6],
+                    data: [],
                     fill: false,
                     backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
@@ -1015,7 +1089,31 @@
                     'rgb(153, 102, 255)',
                     ],
                     borderWidth: 1
-                }]
+                },
+                {
+                    axis: 'y',
+                    label: 'Potentiel maximum atteignable',
+                    data: [16.5, 16.5, 16.5, 16.5, 16.5, 17.5],
+                    fill: false,
+                    backgroundColor: [
+                        'rgb(220,220,220, 0.2)',
+                        'rgb(220,220,220, 0.2)',
+                        'rgb(220,220,220, 0.2)',
+                        'rgb(220,220,220, 0.2)',
+                        'rgb(220,220,220, 0.2)',
+                        'rgb(220,220,220, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgb(169,169,169)',
+                        'rgb(169,169,169)',
+                        'rgb(169,169,169)',
+                        'rgb(169,169,169)',
+                        'rgb(169,169,169)',
+                        'rgb(169,169,169)',
+                    ],
+                    borderWidth: 1
+                }
+            ],
             };
             const config = {
                 type: 'bar',
@@ -1024,10 +1122,6 @@
                     indexAxis: 'y',
                 }
             };
-            const myChart = new Chart(
-                document.getElementById('myChart'),
-                config
-            );
         </script>
         <!-- logique de calcul des résultats -->
         <script>
@@ -1049,16 +1143,8 @@
             var total4 = 0;
             var total5 = 0;
             var total6 = 0;
-
-            /*réponses personnalisées
-            if (total1 < 5) {
-                surveyScoreOutputText1.innerText = "Le message que vous voulez faire passer à travers votre marketing digital, peut certainement être amélioré. Pour débuter cette amélioration, il est indispensable de clarifier votre cible. Sans cela, vos valeurs ou la clarté et la lisibilité de votre marketing digital ne répondra pas aux attentes de votre audience et vos invitations à prendre action seront moins efficaces.";
-            } else if (total1 < 11) {
-                surveyScoreOutputText1.innerText = "Vous êtes sur la bonne voie, vous avez compris l’importance de cibler un public précis. La prochaine étape est maintenant d’être pertinent en matière de contenu et de valeurs que vous voulez diffuser. Grâce à cela votre marketing digital sera clair et vos invitations à prendre action plus intéressantes. Vous convertirez plus de visiteurs.";
-            } else {
-                surveyScoreOutputText1.innerText = "Super, vous faites du bon travail ! Continuez de cibler vos visiteurs et partagez du contenu qui les intéresse. Concentrez-vous sur la clarté et la lisibilité de votre site. N’oubliez pas de modifier régulièrement votre contenu pour qu’il soit toujours à jour. Pour bien réussir à convertir ces visiteurs, comme dit bien Marie-Anne Dujarier, la cible en marketing, c’est ce qu'il faut toucher pour ne pas couler.";
-            }*/
-
+            var myChart = null;
+            var initChart = false;
             //quand le formulaire est envoyer
             surveyForm.addEventListener('submit' , function(event){
                 event.preventDefault();
@@ -1122,6 +1208,87 @@
                 //ajout et remove de class pour rendre des parties visible ou non
                 surveyForm.classList.add('d-none');
                 surveyResult.classList.remove('d-none');
+
+                //Affichage dynamique de la bonne réponse
+                if( total1 < 5) {
+                    var e = document.getElementById('q-1-0');
+                    e.classList.remove('d-none');
+                } else if (total1 >= 5,001 && total1 < 11) {
+                    var e = document.getElementById('q-1-1');
+                    e.classList.remove('d-none');
+                }  else {
+                    var e = document.getElementById('q-1-2');
+                    e.classList.remove('d-none');
+                }
+
+                if( total2 < 5) {
+                    var e = document.getElementById('q-2-0');
+                    e.classList.remove('d-none');
+                } else if (total2 >= 5,001 && total2 < 11) {
+                    var e = document.getElementById('q-2-1');
+                    e.classList.remove('d-none');
+                }  else {
+                    var e = document.getElementById('q-2-2');
+                    e.classList.remove('d-none');
+                }
+
+                if( total3 < 5) {
+                    var e = document.getElementById('q-3-0');
+                    e.classList.remove('d-none');
+                } else if (total3 >= 5,001 && total3 < 11) {
+                    var e = document.getElementById('q-3-1');
+                    e.classList.remove('d-none');
+                }  else {
+                    var e = document.getElementById('q-3-2');
+                    e.classList.remove('d-none');
+                }
+
+                if( total4 < 5) {
+                    var e = document.getElementById('q-4-0');
+                    e.classList.remove('d-none');
+                } else if (total4 >= 5,001 && total4 < 11) {
+                    var e = document.getElementById('q-4-1');
+                    e.classList.remove('d-none');
+                }  else {
+                    var e = document.getElementById('q-4-2');
+                    e.classList.remove('d-none');
+                }
+
+                if( total5 < 5) {
+                    var e = document.getElementById('q-5-0');
+                    e.classList.remove('d-none');
+                } else if (total5 >= 5,001 && total5 < 11) {
+                    var e = document.getElementById('q-5-1');
+                    e.classList.remove('d-none');
+                }  else {
+                    var e = document.getElementById('q-5-2');
+                    e.classList.remove('d-none');
+                }
+
+                if( total6 < 5) {
+                    var e = document.getElementById('q-6-0');
+                    e.classList.remove('d-none');
+                } else if (total6 >= 5,001 && total6 < 11) {
+                    var e = document.getElementById('q-6-1');
+                    e.classList.remove('d-none');
+                }  else {
+                    var e = document.getElementById('q-6-2');
+                    e.classList.remove('d-none');
+                }
+
+                // instance & relance le graphique
+                var values = [total1, total2, total3, total4, total5, total6];
+                if( initChart == false ) {
+                    initChart = true;
+                    config.data.datasets[0].data = values;
+                    myChart = new Chart(
+                        document.getElementById('myChart'),
+                        config
+                    );
+                } else {
+                    myChart.data.datasets[0].data = values;
+                    myChart.update();
+                }
             });
 
             buttonReset.addEventListener('click' , function(){
