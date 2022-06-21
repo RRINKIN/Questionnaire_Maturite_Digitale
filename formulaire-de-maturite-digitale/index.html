@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="FR">
+    <head>
+        <title>Formulaire de maturité marketing digitale</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="Questionnaire de maturité digitale de selegua" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="./css/css.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=122919472"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '122919472');
+        </script>
+    </head>
+    <body>
+        <div class="survey">
+            <div class="survey__form__block">
+                <div class="survey__form__group__image">
+                    <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" alt="Selegua Image Marketing Digital. Photo by Merakist on Unsplash">
+                </div>
+                <form action="#" method="post" id="survey__form" class="survey__form">
+                    <!-- bloc 0 -->
+                    <div class="survey__form__block_sub">
+                        <div class="survey__form__group -required">
+                            <div class="survey__form__group__logo">
+                                <h1>Formulaire de maturité marketing digitale</h1>
+                                <a href="https://www.selegua.be/">
+                                <img src="https://www.selegua.be/wp-content/uploads/2020/06/logo-vecto1-e1596640887130.png" alt="Logo Selegua Département Marketing Partagé">
+                                </a>
+                            </div>
+                            <div class="survey__form__group__text">
+                                <p>En 10 minutes, ce formulaire vous donnera une idée de votre niveau de maturité en matière de marketing digital.
+                                Ce questionnaire comprend 6 parties pour un total de 36 questions. Il couvre, entre autre, les aspects de votre visibilité et votre organisation.
+                                <br>Il vous est offert gratuitement et ne collecte aucune donnée personnelle autres que les cookies.
+                                </p>
+                            </div>
+                            <h2>Questions générales</h2>
+                            <div class="survey__form__group__input">
+                                <ul>
+                                    <li class="survey__form__input__structure">
+                                        <label for="madame" class="survey__form__input__label">Madame</label>
+                                        <input type="radio" name="sex" class="survey__form__input__sex" id="madame"
+                                            value="Madame" required />
+                                    </li>
+                                    <li class="survey__form__input__structure">
+                                        <label for="monsieur" class="survey__form__input__label">Monsieur</label>
+                                        <input type="radio" name="sex" class="survey__form__input__sex" id="monsieur"
+                                            value="Monsieur" required />
+                                    </li>
+                                    <li class="survey__form__input__structure">
+                                        <label for="autre" class="survey__form__input__label">Autre</label>
+                                        <input type="radio" name="sex" class="survey__form__input__sex" id="autre"
+                                            value="Autre" required />
+                                        <!--<span class="survey__form__input__label">Autre</span>-->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group -required">
+                            <!--<label for="name">Prénom</label>-->
+                            <div class="survey__form__group__input">
+                                <input type="text" name="firstname" id="firstname" placeholder="Prénom"
+                                    class="survey__form__input__text" required />
+                            </div>
+                        </div>
+                        <div class="survey__form__group -required">
+                            <!--<label for="name">Nom</label>-->
+                            <div class="survey__form__group__input">
+                                <input type="text" name="name" id="name" placeholder="Nom" class="survey__form__input__text" required />
+                            </div>
+                        </div>
+                        <!-- Hidden for now as no DB behind it.
+                        <div class="survey__form__group -required">
+                            <label for="name">E-mail</label>
+                            <div class="survey__form__group__input">
+                                <input type="email" name="eMail" id="eMail" placeholder="E-mail"
+                                    class="survey__form__input__text" required />
+                            </div>
+                        -->
+                        </div>
+                    </div>
+                    <!-- block 1 -->
+                    <div class="survey__form__block_sub">
+                        <div class="survey__form__group  -required">
+                            <div class="survey__form__answers_wrapper">
+                                <h2>1/6 Visibilité digitale</h2>
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <label for="question1">Avez-vous un site internet</label>
+                            <div class="survey__form__questions" id="question1">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question1" id="oui" class="survey__form__input__radio1" value="1.84" required/>
+                                        <label class="survey__form__input__label" for="oui">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question1" id="non" class="survey__form__input__radio1" value="0" required/>
+                                        <label class="survey__form__input__label" for="non">Non</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question2">Avez-vous un site internet responsive (adapté aux smartphones) ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question2" id="responsiveOui" class="survey__form__input__radio1" value="1.84" required/>
+                                        <label class="survey__form__input__label" for="responsiveOui">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question2" id="responsiveNon" class="survey__form__input__radio1" value="0" required/>
+                                        <label class="survey__form__input__label" for="responsiveNon">Non</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question3">Avez-vous créé une page par produit/service sur votre site internet ? </label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question3" id="produitOui" class="survey__form__input__radio1" value="1.84" required/>
+                                        <label class="survey__form__input__label" for="produitOui">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question3" id="produitNon" class="survey__form__input__radio1" value="0" required/>
+                                        <label class="survey__form__input__label" for="produitNon">Non</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question4">Êtes-vous présent sur des boutiques en ligne (ex. Amazon.com, Google Shopping, Facebook Marketplace...) ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question4" id="marketPlaceOui" class="survey__form__input__radio1" value="1.84" required/>
+                                        <label class="survey__form__input__label" for="marketPlaceOui">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question4" id="marketPlaceNon" class="survey__form__input__radio1" value="0" required/>
+                                        <label class="survey__form__input__label" for="marketPlaceNon">Non</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question5">Combien de réseaux sociaux utilisez-vous ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question5" id="rs0" class="survey__form__input__radio1" value="0" required/>
+                                        <label class="survey__form__input__label" for="rs0">0</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question5" id="rs4" class="survey__form__input__radio1" value="1.84" required/>
+                                        <label class="survey__form__input__label" for="rs4">Entre 1 et 4</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question5" id="rs4plus" class="survey__form__input__radio1" value="0.92" required/>
+                                        <label class="survey__form__input__label" for="rs4plus">Plus de 4</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question6"> A quelle fréquence publiez-vous, par mois, sur vos réseaux sociaux ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question6" id="pub0" class="survey__form__input__radio1" value="0" required/>
+                                        <label class="survey__form__input__label" for="pub0">Jamais</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question6" id="pub2" class="survey__form__input__radio1" value="0" required/>
+                                        <label class="survey__form__input__label" for="pub2">Entre 1 à 2 fois</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question6" id="pub8" class="survey__form__input__radio1" value="0.92" required/>
+                                        <label class="survey__form__input__label" for="pub8">Entre 2 à 8 fois</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question6" id="pub8plus" class="survey__form__input__radio1" value="1.84" required/>
+                                        <label class="survey__form__input__label" for="pub8plus">Plus de 8 fois</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question7"> Avez-vous une newsletter ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question7" id="newsOui" class="survey__form__input__radio1" value="1.84" required/>
+                                        <label class="survey__form__input__label" for="newsOui">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question7" id="newsNon" class="survey__form__input__radio1" value="0" required/>
+                                        <label class="survey__form__input__label" for="newsNon">Non</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question8"> Utilisez-vous un outil spécifique de communication interne entre vos collaborateurs ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question8" id="interneOui" class="survey__form__input__radio1" value="1.84" required/>
+                                        <label class="survey__form__input__label" for="interneOui">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question8" id="interneNon" class="survey__form__input__radio1" value="0" required/>
+                                        <label class="survey__form__input__label" for="interneNon">Non</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question9"> Avez-vous déjà fait appel à un influenceur ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question9" id="inflOui" class="survey__form__input__radio1" value="1.84" required/>
+                                        <label class="survey__form__input__label" for="inflOui">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question9" id="inflNon" class="survey__form__input__radio1" value="0" required/>
+                                        <label class="survey__form__input__label" for="inflNon">Non</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- block 2 -->
+                    <div class="survey__form__block_sub">
+                        <div class="survey__form__group  -required">
+                            <div class="survey__form__answers_wrapper">
+                                <h2>2/6 Votre message</h2>
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <label for="question10">Connaissez-vous vos clients ou mieux, avez-vous défini des personas ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question10" id="personaOui" class="survey__form__input__radio2" value="2.36" required/>
+                                        <label class="survey__form__input__label" for="personaOui">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question10" id="personaBof" class="survey__form__input__radio2" value="1.18" required/>
+                                        <label class="survey__form__input__label" for="personaBof">Plus ou moins</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question10" id="personaNon" class="survey__form__input__radio2" value="0" required/>
+                                        <label class="survey__form__input__label" for="personaNon">Non</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question11">Avez-vous défini un message et des valeurs claires sur votre site internet ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question11" id="valOui" class="survey__form__input__radio2" value="2.36" required/>
+                                        <label class="survey__form__input__label" for="valOui">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question11" id="valBof" class="survey__form__input__radio2" value="1.18" required/>
+                                        <label class="survey__form__input__label" for="valBof">Plus ou moins</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question11" id="valNon" class="survey__form__input__radio2" value="0" required/>
+                                        <label class="survey__form__input__label" for="valNon">Non</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question12">En combien de clics, votre client peut-il trouver sa réponse sur votre site?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question12" id="Q121" class="survey__form__input__radio2" value="2.36" required/>
+                                        <label class="survey__form__input__label" for="Q121">1</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question12" id="Q122" class="survey__form__input__radio2" value="1.18" required/>
+                                        <label class="survey__form__input__label" for="Q122">Entre 2 et 4</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question12" id="Q123" class="survey__form__input__radio2" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q123">Plus de 5</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question13">Pensez-vous que votre site web soit clair et lisible ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question13" id="Q131" class="survey__form__input__radio2" value="2.36" required/>
+                                        <label class="survey__form__input__label" for="Q131">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question13" id="Q132" class="survey__form__input__radio2" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q132">Non</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question14">Combien de fois par an apportez-vous des modifications de contenu à votre site internet ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question14" id="Q141" class="survey__form__input__radio2" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q141">0</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question14" id="Q142" class="survey__form__input__radio2" value="1.18" required/>
+                                        <label class="survey__form__input__label" for="Q142">Entre 2 et 10</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question14" id="Q143" class="survey__form__input__radio2" value="2.36" required/>
+                                        <label class="survey__form__input__label" for="Q143">Plus de 10</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question15">Votre site internet invite t'il clairement le visiteur à prendre action (Commande, contact...)?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question15" id="Q151" class="survey__form__input__radio2" value="2.36" required/>
+                                        <label class="survey__form__input__label" for="Q151">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question15" id="Q152" class="survey__form__input__radio2" value="1.18" required/>
+                                        <label class="survey__form__input__label" for="Q152">Plus ou moins</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question15" id="Q153" class="survey__form__input__radio2" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q153">Non</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question16">Vos clients peuvent-ils vous joindre (mail, téléphone, RS)</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question16" id="Q161" class="survey__form__input__radio2" value="2.36" required/>
+                                        <label class="survey__form__input__label" for="Q161">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question16" id="Q162" class="survey__form__input__radio2" value="0" required/>
+                                        <Label class="survey__form__input__label" for="Q162">Non</Label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- block 3 -->
+                    <div class="survey__form__block_sub">
+                        <div class="survey__form__group  -required">
+                            <div class="survey__form__answers_wrapper">
+                                <h2>3/6 La Concurrence</h2>
+                                <i class="fas fa-compress-arrows-alt"></i>
+                            </div>
+                            <label for="question17">Connaissez-vous vos plus gros concurrents ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question17" id="Q171" class="survey__form__input__radio3" value="4.1" required/>
+                                        <label class="survey__form__input__label" for="Q171">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question17" id="Q172" class="survey__form__input__radio3" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q172">Non</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question18">A quelle fréquence faites vous de la veille concurrencielle par mois ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question18" id="Q181" class="survey__form__input__radio3" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q181">0</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question18" id="Q182" class="survey__form__input__radio3" value="2.05" required/>
+                                        <label class="survey__form__input__label" for="Q182">Entre 1 et 4</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question18" id="Q183" class="survey__form__input__radio3" value="4.1" required/>
+                                        <label class="survey__form__input__label" for="Q183">Plus de 5</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question19">En terme de marketing digital, comment vous qualifieriez vous par rapport à vos concurrents ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question19" id="Q191" class="survey__form__input__radio3" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q191">En retard</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question19" id="Q192" class="survey__form__input__radio3" value="2.05" required/>
+                                        <span class="survey__form__input__label" id="Q192">Au même niveau </span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question19" id="Q193" class="survey__form__input__radio3" value="4.1" required/>
+                                        <span class="survey__form__input__label" for="Q193">En avance</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question20">Avez-vous déjà analysé les messages, les visuels que publient vos plus proches concurrents ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question20" id="Q201" class="survey__form__input__radio3" value="4.1" required/>
+                                        <label class="survey__form__input__label" for="Q201">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question20" id="Q202" class="survey__form__input__radio3" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q202">Non</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- block 4 -->
+                    <div class="survey__form__block_sub">
+                        <div class="survey__form__group  -required">
+                            <div class="survey__form__answers_wrapper">
+                                <h2>4/6 Organisation marketing</h2>
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+                            <label for="question21">Avez-vous un département ou une personne en charge du marketing?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question21" id="Q211" class="survey__form__input__radio4" value="3.3" required/>
+                                        <label class="survey__form__input__label" for="Q211">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question21" id="Q212" class="survey__form__input__radio4" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q212">Non</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question22">Est-ce que ces collaborateurs maitrisent les outils digitaux (ex. CMS, réseaux sociaux, campagnes ou reporting) ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question22" id="Q221" class="survey__form__input__radio4" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q221">Non</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question22" id="Q222" class="survey__form__input__radio4" value="1.65" required/>
+                                        <label class="survey__form__input__label" for="Q222">Certains</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question22" id="Q223" class="survey__form__input__radio4" value="3.3" required/>
+                                        <label class="survey__form__input__label" for="Q223">Tous</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question23">Avez-vous recours à des formations sur les aspects digitaux pour vous mettre à jour ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question23" id="Q231" class="survey__form__input__radio4" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q231">Non</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question23" id="Q232" class="survey__form__input__radio4" value="1.65" required/>
+                                        <label class="survey__form__input__label" for="Q232">Parfois</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question23" id="Q233" class="survey__form__input__radio4" value="3.3" required/>
+                                        <label class="survey__form__input__label" for="Q233">Oui</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question24">Avez-vous un budget clair alloué au marketing digital ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question24" id="Q241" class="survey__form__input__radio4" value="3.3" required/>
+                                        <label class="survey__form__input__label" for="Q241">Oui</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question24" id="Q242" class="survey__form__input__radio4" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q242">Non</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question25">Avez-vous une stratégie (plan d’action) digitale ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question25" id="Q251" class="survey__form__input__radio4" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q251">Non</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question25" id="Q252" class="survey__form__input__radio4" value="1.65" required/>
+                                        <label class="survey__form__input__label" for="Q252">Parfois</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question25" id="Q253" class="survey__form__input__radio4" value="3.3" required/>
+                                        <label class="survey__form__input__label" for="Q253">Oui</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- block 5 -->
+                    <div class="survey__form__block_sub">
+                        <div class="survey__form__group  -required">
+                            <div class="survey__form__answers_wrapper">
+                                <h2>5/6 Maitrise du marketing digital</h2>
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <label for="question26">Utilisez-vous un calendrier éditorial afin de préparer vos futures publications ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question26" id="Q261" class="survey__form__input__radio5" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q261">Non</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question26" id="Q262" class="survey__form__input__radio5" value="1.375" required/>
+                                        <label class="survey__form__input__label" for="Q262">Parfois</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question26" id="Q263" class="survey__form__input__radio5" value="2.75" required/>
+                                        <label class="survey__form__input__label" for="Q263">Oui</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question27">Utilisez-vous de la publicité payante sur les réseaux sociaux ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question27" id="Q271" class="survey__form__input__radio5" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q271">Non</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question27" id="Q272" class="survey__form__input__radio5" value="1.375" required/>
+                                        <label class="survey__form__input__label" for="Q272">Parfois</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question27" id="Q273" class="survey__form__input__radio5" value="2.75" required/>
+                                        <label class="survey__form__input__label" for="Q273">Oui</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question28"> Est-ce que vous faites de l’A/B testing afin de définir quelle publications fonctionnent le mieux ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question28" id="Q281" class="survey__form__input__radio5" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q281">Non</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question28" id="Q282" class="survey__form__input__radio5" value="1.375" required/>
+                                        <label class="survey__form__input__label" for="Q282">Parfois</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question28" id="Q283" class="survey__form__input__radio5" value="2.75" required/>
+                                        <label class="survey__form__input__label" for="Q283">Oui</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question29">Est-ce que vous optimisez vos pages web au niveau de leur référencement naturel (SEO) ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question29" id="Q291" class="survey__form__input__radio5" value="0" required/>
+                                        <label class="survey__form__input__label" for="Q291">Non</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question29" id="Q292" class="survey__form__input__radio5" value="0.68" required/>
+                                        <label class="survey__form__input__label" for="Q292">Peu</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question29" id="Q293" class="survey__form__input__radio5" value="1.36" required/>
+                                        <label class="survey__form__input__label" for="Q293">Parfois</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question29" id="Q294" class="survey__form__input__radio5" value="2.04" required/>
+                                        <label class="survey__form__input__label" for="Q294">Souvent</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question29" id="Q295" class="survey__form__input__radio5" value="2.75" required/>
+                                        <label class="survey__form__input__label" for="Q295">Toujours</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question30">Utilisez-vous le référencement payant (SEA) ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question30" class="survey__form__input__radio5" value="0" required/>
+                                        <span class="survey__form__input__label">Non</span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question30" class="survey__form__input__radio5" value="1.375" required/>
+                                        <span class="survey__form__input__label">Parfois</span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question30" class="survey__form__input__radio5" value="2.75" required/>
+                                        <span class="survey__form__input__label">Oui</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question31">Faites vous de la vidéo/photo, articles de blog ou des lives?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question31" class="survey__form__input__radio5" value="0" required/>
+                                        <span class="survey__form__input__label">vidéo/photos</span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question31" class="survey__form__input__radio5" value="0.68" required/>
+                                        <span class="survey__form__input__label">Articles de blog</span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question31" class="survey__form__input__radio5" value="1.36" required/>
+                                        <span class="survey__form__input__label">Live</span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question31" class="survey__form__input__radio5" value="2.04" required/>
+                                        <span class="survey__form__input__label">Deux d'entre eux</span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question31" class="survey__form__input__radio5" value="2.75" required/>
+                                        <span class="survey__form__input__label">Tous</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- block 6 -->
+                    <div class="survey__form__block_sub">
+                        <div class="survey__form__group  -required">
+                            <div class="survey__form__answers_wrapper">
+                                <h2>6/6 La Mesure</h2>
+                                <i class="far fa-chart-bar"></i>
+                            </div>
+                            <label for="question32">Avez-vous défini des KPIs (indice de performance) ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question32" class="survey__form__input__radio6" value="0" required/>
+                                        <span class="survey__form__input__label">Non</span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question32" class="survey__form__input__radio6" value="1.75" required/>
+                                        <span class="survey__form__input__label">Certains</span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question32" class="survey__form__input__radio6" value="3.5" required/>
+                                        <span class="survey__form__input__label">Oui</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question33">Avez-vous un/des outils d’analyse de données de vos actions marketing (ex. Google analytics, Facebook reporting...) ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question33" class="survey__form__input__radio6" value="0" required/>
+                                        <span class="survey__form__input__label">Non</span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question33" class="survey__form__input__radio6" value="3.5" required/>
+                                        <span class="survey__form__input__label">Oui</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question34">Exploitez-vous ces données pour piloter vos actions marketing?"</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question34" class="survey__form__input__radio6" value="0" required/>
+                                        <span class="survey__form__input__label">Non</span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question34" class="survey__form__input__radio6" value="1.75" required/>
+                                        <span class="survey__form__input__label">Certains</span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question34" class="survey__form__input__radio6" value="3.5" required/>
+                                        <span class="survey__form__input__label">Oui</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question35">Utilisez-vous un outil de reporting automatisé ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question35" class="survey__form__input__radio6" value="0" required/>
+                                        <span class="survey__form__input__label">Non</span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question35" class="survey__form__input__radio6" value="3.5" required/>
+                                        <span class="survey__form__input__label">Oui</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="survey__form__group  -required">
+                            <label for="question36">Est-ce que vous connaissez la position de vos pages dans google ?</label>
+                            <div class="survey__form__questions">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="question36" class="survey__form__input__radio6" value="0" required/>
+                                        <span class="survey__form__input__label">Non</span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="question36" class="survey__form__input__radio6" value="3.5" required/>
+                                        <span class="survey__form__input__label">Oui</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- boutons-->
+                    <div class="survey__form__submit__wrapper">
+                        <button type="submit" id="survey__form__submit" class="survey__form__submit button -primary"> J'évalue ma maturité digitale</button>
+                    </div>
+                </form>
+                <div id="survey__result" class="d-none">
+                    <div class="survey__form__group__logo">
+                        <h1>Formulaire de maturité digitale</h1>
+                        <img src="https://www.selegua.be/wp-content/uploads/2020/06/logo-vecto1-e1596640887130.png" alt="Logo de Selegua Agence de Marketing Digital">
+                    </div>
+                    <br><span id="survey__person__output"></span>
+                    <p>Vous trouverez ci-dessous les résultats de votre étude de maturité. Nous espérons que cela vous sera utile pour progresser dans votre marketing.</p>
+                    <div>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div  class="survey__form__answers_wrapper">
+                        <!-- Réponses intelligente block 1 -->
+                        <div class="survey__form__block_sub_small">
+                            <i class="fas fa-eye"></i>
+                            A la thématique 1/6 "Visibilité digitale",  vous avez réalisé le score de <span id="survey__score__output1"></span>%
+                            <p class="d-none" id="q-1-0">Le message que vous voulez faire passer à travers votre marketing digital, peut certainement être amélioré. Pour débuter cette amélioration, pensez à clarifier votre cible. Sans cela, vos valeurs et la lisibilité de vos messages ne répondra pas vraiment aux attentes de votre audience. En plus, vos invitations à prendre action seront moins efficaces. 
+                            <br>
+                            <br> Découvrez comment améliorer votre positionnement et ciblage : <a href="https://www.selegua.be/etudes-digitale-de-marche">etudes-digitale-de-marche</a>
+                            </p>
+                            <p class="d-none" id="q-1-2">Vous êtes sur la bonne voie, vous avez compris l’importance de cibler un public précis. La prochaine étape est peut-être d’être encore plus pertinent en matière de contenu et de valeurs que vous voulez diffuser. Grâce à cela, votre marketing digital sera clair et vos invitations à prendre action plus intéressantes. Vous convertirez plus de visiteurs. 
+                            <br>
+                            <br> Découvrez comment améliorer votre positionnement et ciblage : <a href="https://www.selegua.be/etudes-digitale-de-marche">etudes-digitale-de-marche</a>
+                            </p>
+                            <p class="d-none" id="q-1-3">Super, vous faites du bon travail ! Continuez de cibler vos visiteurs et partagez du contenu qui les intéresse. Concentrez-vous sur la clarté et la lisibilité de votre site. N’oubliez pas de modifier régulièrement votre contenu pour qu’il soit toujours à jour. Pour bien réussir à convertir ces visiteurs. Comme le dit Marie-Anne Dujarier, la cible en marketing, c’est ce qu'il faut toucher pour ne pas couler.
+                            </p>
+                        </div>
+
+                        <!-- Réponses intelligente block 2 -->
+                        <div class="survey__form__block_sub_small">
+                            <i class="fas fa-comment"></i>
+                            A la thématique 2/6 "votre message", vous avez réalisé le score de <span id="survey__score__output2"></span>%
+                            <p class="d-none" id="q-2-0">Attention, votre visibilité sur internet semble faible. Priorité à 2 choses. Premièrement, un site internet responsive, à jour et contenant une page pour chaque produit / service. Ensuite, ouvrez un second canal de communication afin d’y diffuser du contenu (réseaux sociaux, newsletter, influenceurs ou marketplace). 
+                            <br>
+                            <br> Découvrez ici comment remédier à cela : <a href="https://www.selegua.be/assistance-marketing">Community</a> et <a href="https://www.selegua.be/community-management">Assistance marketing digital.</a>
+                            </p>
+                            <p class="d-none" id="q-2-1">Vous êtes bien parti, mais on peut toujours mieux faire. Il semble que l’infrastructure de communication soit en place, on peut maintenant travailler la fréquence de communication. 
+                                Essayer de publier du contenu plus régulièrement et d’en varier le contenu. Parlez de vous, de vos réalisations, de vos équipes, de vos clients… Faites rêver. Et faites un calendrier éditorial ;-).  
+                            <br>
+                            <br> Découvrez ici comment remédier à cela : <a href="https://www.selegua.be/assistance-marketing">Community</a> et <a href="https://www.selegua.be/community-management">Assistance marketing digital.</a>
+                            </p>
+                            <p class="d-none" id="q-2-2">Super, continuez comme ça ! Continuer de publier du contenu régulièrement afin d’accroître votre visibilité. Cela devrait engager votre public, les impliquer dans vos posts et surtout les fidéliser sur le long terme. Beaucoup de canaux différents sont disponibles, n’hésitez pas à vous créer de nouvelles audiences dans les différents supports afin de vous créer une belle communauté.
+                            </p>
+                        </div>
+
+                        <!-- Réponses intelligente block 3 -->
+                        <div class="survey__form__block_sub_small">
+                            <i class="fas fa-compress-arrows-alt"></i>
+                            A la thématique 3/6 "Concurrence", vous avez réalisé le score de <span id="survey__score__output3"></span>%
+                            <p class="d-none" id="q-3-0">Vous êtes au début de votre veille. Écouter et connaître son marché et ses concurrents permet d’identifier les opportunités à saisir, fixer vos prix ou réagir aux concurrents. Vous pourrez aussi vous positionner de manière différenciant pour vous démarquer et non vous noyez dans la masse. Prenez le temps de faire un tour sur les sites concurrents.
+                            <br>    
+                            <br> Découvrez ici de quelle manière il est possible de prendre la tangente ! <a href="https://www.selegua.be/etudes-digitale-de-marche">Veille et étude de marché</a>
+                            </p>
+                            <p class="d-none" id="q-3-1">C’est bien, mais vous pouvez aller un peu plus loin. Pourquoi ne pas systématiser voir automatiser votre veille ? Écouter et connaître votre marché et vos concurrents devrait vous permettre d’identifier de nouvelles opportunités et de renforcer votre positionnement différenciant. 
+                            <br> 
+                            <br> Découvrez ici de quelle manière il est possible de prendre la tangente ! <a href="https://www.selegua.be/etudes-digitale-de-marche">Veille et étude de marché</a>
+                            </p>
+                            <p class="d-none" id="q-3-2">C’est top, continuez comme ça ! Il semble que vous soyez attentif à votre marché et bien équipé pour écouter ce qu’il s’y passe. Maintenez le rythme, car votre marché peut changer à tout moment.
+                            </p>
+                        </div>
+
+                        <!-- Réponses intelligente block 4 -->
+                        <div class="survey__form__block_sub_small">
+                            <i class="fas fa-user-friends"></i>
+                            A la thématique 4/6 "Organisation marketing", vous avez réalisé le score de <span id="survey__score__output4"></span>%
+                            <p class="d-none" id="q-4-0">Vous pouvez mieux faire ! Votre organisation marketing est primordiale. Tout d'abord, assurez-vous que quelqu’un s’approprie le projet. Ensuite, définissez un budget. Enfin, définissez vos objectifs et créez un plan d’action. Le reste va suivre naturellement. Bonne chance !
+                            <br> 
+                            <br> Découvrez ici les possibilités disponibles <a href="https://www.selegua.be/direction-marketing">Direction marketing</a></p>
+                            <p class="d-none" id="q-4-1">C’est bien. Votre équipe marketing se structure. Concentrez-vous dès lors sur le plan d’action, les expertises dont vous avez besoin et les outils à utiliser. Au besoin, envisagez de former vos équipes ou de vous faire accompagner. Finalement, mesurez le tout si ce n’est pas encore le cas. C’est à ce prix que vous trouverez la stratégie qui fonctionne pour vous. 
+                            <br> 
+                            <br> Découvrez ici les possibilités disponibles <a href="https://www.selegua.be/direction-marketing">Direction marketing</a>
+                            </p>
+                            <p class="d-none" id="q-4-2">Vous êtes dans le bon et vous avez compris comment vous devez fonctionner. L’accent reste sur la mesure, le recul, le challenge de vos actions par vous-même, vos équipes ou par un regard extérieur. En marketing digital, douter et essayer reste une valeur sûre.
+                            </p>
+                        </div>
+                        
+                        <!-- Réponses intelligente block 5 -->
+                        <div class="survey__form__block_sub_small">
+                            <i class="fas fa-brain"></i>
+                            A la thématique 5/6 "Maitrise du marketing digital", vous avez réalisé le score de <span id="survey__score__output5"></span>%
+                            <p class="d-none" id="q-5-0">Votre maîtrise semble encore un peu faible et vous ratez probablement des opportunités. Vous n’avez pas encore développé de véritable stratégie pour faire de l’acquisition de client. Pourquoi ne pas commencer par une campagne payante sur Google ou sur un réseau social ? On peut y faire des choses efficaces pour des budgets raisonnables. 
+                            <br>
+                            <br> Découvrez ici comment vous pouvez activer les bons leviers. <a href="https://www.selegua.be/marketing-digital ">Marketing digital</a>
+                            </p>
+                            <p class="d-none" id="q-5-1">C’est bien mais, comme toujours, vous pouvez progresser. Pourquoi ne pas varier les techniques. Travailler votre SEO, varier votre contenu (vidéo, lives, articles…), spécialiser vos campagnes payantes… Les solutions sont très nombreuses. Testez et ne retenez que les plus efficaces ou copiez vos concurrents ;-) 
+                            <br>
+                            <br> Découvrez ici comment vous pouvez activer les bons leviers. <a href="https://www.selegua.be/marketing-digital ">Marketing digital</a>
+                            </p>
+                            <p class="d-none" id="q-5-2">Vous faites du bon boulot. Il ne reste plus qu’à varier les techniques. Travailler votre SEO, varier votre contenu (vidéo, lives, articles…), spécialiser vos campagnes payantes… Les solutions sont très nombreuses. Testez et ne retenez que les plus efficaces ou copiez vos concurrents ;-)
+                            </p>
+                        </div>
+                        
+                        <!-- Réponses intelligente block 6 -->
+                        <div class="survey__form__block_sub_small">
+                            <i class="far fa-chart-bar"></i>
+                            A la thématique 6/6 "La Mesure", vous avez réalisé le score de <span id="survey__score__output6"></span>%
+                            <p class="d-none" id="q-6-0">C'est dommage, vous êtes aveugle quant à l’efficacité de l’ensemble de vos efforts marketing ! L’élément central du marketing est de pouvoir analyser ses actions et en tirer des conclusions. Fixez des objectifs et des KPIs. Ensuite, allez faire un tour sur Google Analytics et les outils de reporting de vos réseaux sociaux.
+                            <br>
+                            <br> Découvrez ici les meilleurs moyens de mesurer ses efforts marketing. <a href="https://www.selegua.be/etudes-digitale-de-marche">Mesure</a>
+                            </p>
+                            <p class="d-none" id="q-6-1">C’est bien ! Passons la seconde. L’élément central du marketing est de pouvoir analyser ses actions et en tirer des conclusions. Clarifiez vos objectifs et KPIs et mesurez-les en permanence. Poussez l’exploitation de ses données au maximum et fixez-vous 1h toutes les semaines pour en discuter avec l’équipe Marketing et réorienter vos actions.
+                            <br>
+                            <br> Découvrez ici les meilleurs moyens de mesurer ses efforts marketing. <a href="https://www.selegua.be/etudes-digitale-de-marche">Mesure</a>
+                            </p>
+                            <p class="d-none" id="q-6-2">Vous êtes sur la bonne voie ! L’élément central du marketing est de pouvoir analyser ses actions et en tirer des conclusions. Clarifiez vos objectifs et KPIs et mesurez-les en permanence. Envisagez peut-être d’automatiser vos reportings si ce n’est pas le cas et fixer vous 1h toutes les deux semaines pour en discuter avec l’équipe Marketing.
+                            </p>
+                        </div>
+                        <p>De nombreuses pistes d'amélioration sont possibles. Découvrez les sur <a href="https://www.selegua.be">notre site.</a></p>
+                    </div>
+                    <br>
+                    <div class="l-main-buttonToContact_wrapper">
+                        <div class="l-main-buttonToContact">
+                            <i class="fas fa-paper-plane"></i>
+                            <a href="https://www.selegua.be/contact">Contactez-nous</a>
+                        </div>
+                    </div>
+                    <div class="l-main-butterRS-wrapper">
+                        <button id="survey__reset" class="button -secondary">Relancer un formulaire</button>
+                        <div>
+                            <a href="https://www.linkedin.com/company/selegua/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://fr-fr.facebook.com/SeleguaMarketing/"><i class="fab fa-facebook-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Graphique pour affichage des résultats -->
+        <script src="./js/graph.js"></script>
+        <!-- Logique de calcul -->
+        <script src="./js/calculation.js"></script>
+    </body>
+</html>
