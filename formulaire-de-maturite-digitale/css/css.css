@@ -30,7 +30,7 @@ button {
     margin-bottom: .5rem;
     display: inline;
 }
-label{
+label {
     display: inline-block;
     margin-bottom: .5rem;
 }
@@ -61,9 +61,6 @@ label{
     color: firebrick;
     margin-left: 4px;
 }
-/*.survey__form__group__image {
-    margin: 0 1rem;
-}*/
 .survey__form__group__image img {
     max-width: 900px;
     width: 100%;
@@ -80,7 +77,7 @@ label{
     padding: 16px 16px 16px 0;
 }
 .survey__form__group__text {
-    max-width: 450px;
+    max-width: 100%;
 }
 .survey__form__block {
     margin: 1rem auto;
@@ -150,6 +147,53 @@ label{
 .fa-eye, .fa-comment, .fa-compress-arrows-alt, .fa-user-friends, .fa-brain, .fa-chart-bar {
     color: rgb(46, 89, 134);
 }
+
+/* Tool Tips */
+.tooltip {
+    position: relative;
+    border-bottom: 1px dotted black;
+  }
+  
+.tooltip:before {
+    content: attr(tooltip-data); 
+    position: absolute;
+    width: 250px;
+    background-color: #5c5b5a;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    line-height: 1.1;
+    border-radius: 5px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .5s;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    font-size: 0.70em;
+    visibility: hidden;
+}
+
+.tooltip:after {
+    content: "";
+    position: absolute;
+    bottom: 75%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    opacity: 0;
+    transition: opacity .5s;
+    border-color: #5c5b5a transparent transparent transparent;
+    visibility: hidden;
+}
+  
+.tooltip:hover:before, 
+.tooltip:hover:after {
+opacity: 1;
+visibility: visible;
+}
+
 @media screen and (max-width: 600px) {
     .survey__form__group__logo {
         display: block;
@@ -162,7 +206,11 @@ label{
         padding: 1rem;
         max-width: 49%;
         border-radius: 16px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         background-image: linear-gradient(45deg, rgb(250, 250, 250), rgb(185, 185, 194));
+    }
+
+    .survey__form__group__logo > a {
+        padding: 0 1rem;
     }
 }
