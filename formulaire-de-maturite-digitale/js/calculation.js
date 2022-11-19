@@ -89,6 +89,13 @@ surveyForm.addEventListener('submit' , function(event){
     surveyScoreOutput5.innerText = totalRounded5;
     surveyScoreOutput6.innerText = totalRounded6;
 
+    // capture data to .csv file
+    let form = new FormData(document.getElementById('survey__form'));
+    fetch("./php/dataCollection.php", {
+      method: "POST",
+      body: form
+    })
+
     //ajout et remove de class pour rendre des parties visible ou non
     surveyForm.classList.add('d-none');
     surveyResult.classList.remove('d-none');
